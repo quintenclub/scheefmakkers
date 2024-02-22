@@ -4,7 +4,6 @@ document.querySelectorAll('a[href^="#"]').forEach(el => {
         document.querySelector(e.target.getAttribute('href')).scrollIntoView({
             behavior: 'smooth',
         });
-        window.trigger('scroll');
     });
 });
 let nodes = document.querySelectorAll('.footernavfixed');
