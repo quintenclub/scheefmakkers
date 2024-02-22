@@ -2,8 +2,9 @@ document.querySelectorAll('a[href^="#"]').forEach(el => {
     el.addEventListener('click', e => {
         e.preventDefault();
         document.querySelector(e.target.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+            behavior: 'smooth',
         });
+        window.trigger('scroll');
     });
 });
 let nodes = document.querySelectorAll('.footernavfixed');
@@ -12,7 +13,7 @@ if (window.scrollY < 128 && document.body.offsetHeight > window.innerHeight) {
         node.classList.add('footernavfixed--hidden');
     });
 }
-window.addEventListener('scroll', () => {
+let whenScrolling = () => {
     nodes.forEach(node => {
         if (window.scrollY < 128) {
             node.classList.add('footernavfixed--hidden');
@@ -20,4 +21,5 @@ window.addEventListener('scroll', () => {
             node.classList.remove('footernavfixed--hidden');
         }
     });
-});
+};
+window.addEventListener('scroll', whenScrolling);
