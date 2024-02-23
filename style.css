@@ -7,7 +7,6 @@ body {
     color: black;
     min-height: 100vh;
 }
-
 a {
     text-decoration: underline;
     color: black;
@@ -33,7 +32,6 @@ a:hover {
 .videoplayer {
     max-height: 100%;
 }
-
 .videoplayer__video {
     width: 100%;
     height: auto;
