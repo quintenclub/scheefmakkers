@@ -19,6 +19,15 @@ a:hover {
     text-align: center;
 }
 
+.moan {
+    color: #696969;
+}
+
+.turned-on {
+    background-color: black;
+    color: white;
+}
+
 .page {
     height: 100vh;
     box-sizing: border-box;
